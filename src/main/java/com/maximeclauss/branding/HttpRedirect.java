@@ -1,4 +1,4 @@
-package com.happytree.web;
+package com.maximeclauss.branding;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;

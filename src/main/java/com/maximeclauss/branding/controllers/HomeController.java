@@ -1,4 +1,4 @@
-package com.happytree.web.controllers;
+package com.maximeclauss.branding.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
