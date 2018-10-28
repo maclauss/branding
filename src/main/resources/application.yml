@@ -2,16 +2,16 @@ spring.application.name: branding
 ---
 spring:
   profiles: default
-server.port: {$PORT:9005}
+server.port: ${PORT:9005}
 ---
 spring:
   profiles: development
-server.port: {$PORT:9005}
+server.port: ${PORT:9005}
 ---
 spring:
   profiles: test
-server.port: {$PORT:80}
+server.port: ${PORT:80}
 ---
 spring:
   profiles: production
-server.port: {$PORT:80}
+server.port: ${PORT:80}
