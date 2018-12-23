@@ -14,8 +14,8 @@ docker tag ${application}:${version} gcr.io/${project}/${application}:${version}
 docker push gcr.io/${project}/${application}:${version}
 
 gcloud beta compute instance-templates create-with-container ${application}-instance-template-${version} \
-    --machine-type f1-micro \
-    --tags http-server,https-server \
+    --machine-type g1-small \
+    --tags allow-health-check \
     --container-image gcr.io/${project}/${application}:${version} \
     --container-env environment=${environment} \
     --project ${project}

@@ -13,10 +13,10 @@ import { withStyles } from '@material-ui/core/styles';
 const HomePage = props =>
   <div className={props.classes.heroUnit}>
     <div className={props.classes.heroContent}>
-      <Typography variant="display3" align="center" color="textPrimary" gutterBottom>
+      <Typography variant="display2" align="center" color="textPrimary" gutterBottom>
         Who am I?
       </Typography>
-      <Typography variant="title" align="center" color="textSecondary" paragraph>
+      <Typography variant="body2" align="justify" color="textSecondary" paragraph>
         My name is Maxime Clauss, I am a Software & Machine Learning Engineer and a Technology Enthusiast, currently the CTO of deepgreen, a Colorado-based Computer Vision company detecting pests and pathogens to optimize crop production, reduce pesticide use, and enhance food quality.
         <br/><br/>
         I am a jack of all trades of software engineering and problem solving, particularly good at designing, overseeing, and building very large and complex systems that require a broad range of skills and expertise to coordinate. I use Python and Java everyday, know another ~10 languages including modeling ones, can design complex and optimized database models, know and care about the asymptotic complexities of all modern data structure operations, can design deep neural networks, can setup a CI/CD pipeline and an efficient Devops process. I also build teams, I am very good at assessing and attracting talent, I talk to investors and shareholders, build strategies around technology, and can easily hold product demos.

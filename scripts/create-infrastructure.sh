@@ -10,11 +10,11 @@ if [[ $# -eq 1 ]]
 fi
 
 # create health check
-gcloud compute https-health-checks create ${application}-health-check \
+gcloud compute http-health-checks create ${application}-health-check \
     --check-interval="10s" \
     --healthy-threshold=2 \
     --unhealthy-threshold=3 \
-    --port=443 \
+    --port=80 \
     --request-path="/health" \
     --timeout="5s" \
     --project ${project}
@@ -29,24 +29,24 @@ gcloud compute instance-groups managed create ${application}-instance-group \
 
 gcloud compute instance-groups managed set-autoscaling ${application}-instance-group \
     --min-num-replicas 1 \
-    --max-num-replicas 1 \
+    --max-num-replicas 2 \
     --target-cpu-utilization 0.6 \
     --cool-down-period 90 \
     --zone us-central1-a \
     --project ${project}
 
 gcloud beta compute instance-groups managed set-autohealing ${application}-instance-group \
-    --initial-delay 600 \
-    --https-health-check ${application}-health-check \
+    --initial-delay 240 \
+    --http-health-check ${application}-health-check \
     --zone us-central1-a \
     --project ${project}
 
 # create backend service
 gcloud compute backend-services create ${application}-backend-service \
-    --protocol https \
+    --protocol http \
     --timeout 90s \
     --connection-draining-timeout 300s \
-    --https-health-checks ${application}-health-check \
+    --http-health-checks ${application}-health-check \
     --global \
     --project ${project}
 
@@ -62,19 +62,13 @@ gcloud compute backend-services add-backend ${application}-backend-service \
 
 # Set named ports
 gcloud compute instance-groups managed set-named-ports ${application}-instance-group \
-    --named-ports https:443 \
+    --named-ports http:80 \
     --zone us-central1-a \
     --project ${project}
 
 # create ip addresses
 gcloud compute addresses create ${application}-ipv4-address \
     --ip-version=IPV4 \
-    --network-tier STANDARD \
-    --region us-central1 \
-    --project ${project}
-
-gcloud compute addresses create ${application}-ipv6-address \
-    --ip-version=IPV6 \
     --network-tier STANDARD \
     --region us-central1 \
     --project ${project}

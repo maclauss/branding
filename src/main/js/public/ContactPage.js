@@ -15,10 +15,10 @@ import { withStyles } from '@material-ui/core/styles';
 const ContactPage = props =>
   <div className={props.classes.heroUnit}>
     <div className={props.classes.heroContent}>
-      <Typography variant="display3" align="center" color="textPrimary" gutterBottom>
+      <Typography variant="display2" align="center" color="textPrimary" gutterBottom>
         Contact
       </Typography>
-      <Typography variant="title" align="center" color="textSecondary" paragraph>
+      <Typography variant="body2" align="center" color="textSecondary" paragraph>
         Want to get in touch? Send me an email!
       </Typography>
       <div className={props.classes.heroButtons}>

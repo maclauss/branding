@@ -19,65 +19,73 @@ const ProjectPage = props =>
   <div>
     <div className={props.classes.heroUnit}>
       <div className={props.classes.heroContent}>
-        <Typography variant="display3" align="center" color="textPrimary" gutterBottom>
+        <Typography variant="display2" align="center" color="textPrimary" gutterBottom>
           My Projects
         </Typography>
-        <Typography variant="title" align="center" color="textSecondary" paragraph>
+        <Typography variant="body2" align="center" color="textSecondary" paragraph>
           You will find below some of the projects I have been working on in the last few years. This list is non-exhaustive and I will add more as I find their source code.
           <br/><br/>
           If you are interested in one of these, feel free to check the code and contact me to know more!
         </Typography>
       </div>
     </div>
-    <div className={props.classes.content}>
-      <Grid container spacing={16}
-        alignItems="stretch"
-        direction="row"
-        justify="center">
-        <Project photo="https://storage.googleapis.com/branding-public-assets/deepgreen_camera_center_pivot.jpg"
-          name="deepgreen"
-          description="An entire company. deepgreen (DGAI, Inc.) is a Computer Vision company leveraging Artificial Intelligence and Deep Neural Networks to detect pests and pathogens on plants. A couple hundred thousand lines of code for IoT and Machine Learning, using Microservices and state of the art deep learning technologies. Code (Java, Python, Bash, Javascript) obviously not available."
-          classes={props.classes}
-          keywords={"Java, Python, Bash, react, MySQL, Google Cloud, Enterprise Architecture, Algorithms, Tensorflow, Machine Learning, Internet of Things"}
-          website="https://www.deepgreen.ai"/>
-        <Project photo="https://storage.googleapis.com/branding-public-assets/raytracer.png"
-          name="Ray Tracer"
-          description="A simple Ray Tracer in Java, implementing very simple shapes as well as ambient, diffuse, specular shading, and anti-aliasing."
-          classes={props.classes}
-          keywords={"Java, Rendering"}
-          github="https://github.com/maclauss/raytracer"/>
-        <Project photo="https://storage.googleapis.com/branding-public-assets/home_api.png"
-          name="Home Automation API"
-          description="Simple secured API server to run on a raspberry pi at Home, to integrate Google Home voice controls with Command Fusion type devices."
-          classes={props.classes}
-          keywords={"Python, Internet of Things"}
-          github="https://github.com/maclauss/home-api"/>
-        <Project photo="https://storage.googleapis.com/branding-public-assets/branding_website.png"
-          name="Personal Website"
-          description="The website you are looking at, built with react and Java."
-          classes={props.classes}
-          keywords={"Java, react, Google Cloud"}
-          github="https://github.com/maclauss/branding"/>
-        <Project photo="https://storage.googleapis.com/branding-public-assets/chess.jpeg"
-          name="Chess"
-          description="A game I first built when I started getting really excited about algorithmic, using an alpha-beta pruning enabled min-max AI. I am looking for the code, stay tuned."
-          classes={props.classes}
-          keywords={"Java, Algorithms, Gaming"}/>
-        <Project photo="https://storage.googleapis.com/branding-public-assets/reversi.jpg"
-          name="Reversi"
-          description="A simple version of reversi, built with the same alpha-beta pruning enabled min-max as the chess game. I am looking for the code, stay tuned."
-          classes={props.classes}
-          keywords={"Java, Algorithms, Gaming"}/>
-        <Project photo="https://storage.googleapis.com/branding-public-assets/minesweeper.png"
-          name="Minesweeper"
-          description="A very simple minesweeper I built for a friend who wanted more customization over the legendary game! I am looking for the code, stay tuned."
-          classes={props.classes}
-          keywords={"Java, Algorithms, Gaming"}/>
-        <Project photo="https://storage.googleapis.com/branding-public-assets/algorithms.jpg"
-          name="Countless Algorithms for Fun"
-          description="I will try to regroup some of them, non-exhaustive list includes Dijkstra, Hierarchical A*, Alpha-Beta, Resnet, Retinanet, and many, many others..."
-          classes={props.classes}
-          keywords={"Java, Python, C, Algorithms"}/>
+    <div>
+      <Grid container spacing={16}>
+        <Grid item md={2}>
+        </Grid>
+        <Grid item xs={12} md={8}>
+          <Grid container spacing={16}
+            alignItems="stretch"
+            direction="row"
+            justify="center">
+            <Project photo="https://storage.googleapis.com/branding-public-assets/deepgreen_camera_center_pivot.jpg"
+              name="deepgreen"
+              description="An entire company. deepgreen (DGAI, Inc.) is a Computer Vision company leveraging Artificial Intelligence and Deep Neural Networks to detect pests and pathogens on plants. A couple hundred thousand lines of code for IoT and Machine Learning, using Microservices and state of the art deep learning technologies. Code (Java, Python, Bash, Javascript) obviously not available."
+              classes={props.classes}
+              keywords={"Java, Python, Bash, react, MySQL, Google Cloud, Enterprise Architecture, Algorithms, Tensorflow, Machine Learning, Internet of Things"}
+              website="https://www.deepgreen.ai"/>
+            <Project photo="https://storage.googleapis.com/branding-public-assets/raytracer.png"
+              name="Ray Tracer"
+              description="A simple Ray Tracer in Java, implementing very simple shapes as well as ambient, diffuse, specular shading, and anti-aliasing."
+              classes={props.classes}
+              keywords={"Java, Rendering"}
+              github="https://github.com/maclauss/raytracer"/>
+            <Project photo="https://storage.googleapis.com/branding-public-assets/home_api.png"
+              name="Home Automation API"
+              description="Simple secured API server to run on a raspberry pi at Home, to integrate Google Home voice controls with Command Fusion type devices."
+              classes={props.classes}
+              keywords={"Python, Internet of Things"}
+              github="https://github.com/maclauss/home-api"/>
+            <Project photo="https://storage.googleapis.com/branding-public-assets/branding_website.png"
+              name="Personal Website"
+              description="The website you are looking at, built with react and Java."
+              classes={props.classes}
+              keywords={"Java, react, Google Cloud"}
+              github="https://github.com/maclauss/branding"/>
+            <Project photo="https://storage.googleapis.com/branding-public-assets/chess.jpeg"
+              name="Chess"
+              description="A game I first built when I started getting really excited about algorithmic, using an alpha-beta pruning enabled min-max AI. I am looking for the code, stay tuned."
+              classes={props.classes}
+              keywords={"Java, Algorithms, Gaming"}/>
+            <Project photo="https://storage.googleapis.com/branding-public-assets/reversi.jpg"
+              name="Reversi"
+              description="A simple version of reversi, built with the same alpha-beta pruning enabled min-max as the chess game. I am looking for the code, stay tuned."
+              classes={props.classes}
+              keywords={"Java, Algorithms, Gaming"}/>
+            <Project photo="https://storage.googleapis.com/branding-public-assets/minesweeper.png"
+              name="Minesweeper"
+              description="A very simple minesweeper I built for a friend who wanted more customization over the legendary game! I am looking for the code, stay tuned."
+              classes={props.classes}
+              keywords={"Java, Algorithms, Gaming"}/>
+            <Project photo="https://storage.googleapis.com/branding-public-assets/algorithms.jpg"
+              name="Countless Algorithms for Fun"
+              description="I will try to regroup some of them, non-exhaustive list includes Dijkstra, Hierarchical A*, Alpha-Beta, Resnet, Retinanet, and many, many others..."
+              classes={props.classes}
+              keywords={"Java, Python, C, Algorithms"}/>
+          </Grid>
+        </Grid>
+        <Grid item md={2}>
+        </Grid>
       </Grid>
     </div>
   </div>;
