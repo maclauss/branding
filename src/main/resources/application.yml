@@ -11,3 +11,6 @@ server.port: ${PORT:9005}
 spring:
   profiles: production
 server.port: ${PORT:443}
+server.ssl:
+  key-store: classpath:keystore.p12
+  keyStoreType: PKCS12

@@ -10,4 +10,4 @@ ADD build/libs/branding-0.0.1-SNAPSHOT.jar /app
 EXPOSE 443
 
 # Run app.py when the container launches
-CMD ["java", "-Dspring.profiles.active=${environment}", "-jar", "/app/branding-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-Dspring.profiles.active=${environment}", "-Dserver.ssl.key-store-password=${SERVER_SSL_KEYSTOREPASSWORD}", "-jar", "/app/branding-0.0.1-SNAPSHOT.jar"]

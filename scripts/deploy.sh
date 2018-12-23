@@ -12,8 +12,10 @@ fi
 
 echo "Deploying ${application}:${version} to ${environment}"
 
-gcloud beta compute instance-groups managed rolling-action start-update ${application}-instance-group \
-    --version template=${application}-instance-template-${version} \
-    --max-surge 1 \
+gcloud compute instances delete ${application}
+
+gcloud compute instances create ${application} \
+    --source-instance-template ${application}-instance-template-${version} \
+    --address branding-ipv4-address \
     --zone us-central1-a \
     --project ${project}

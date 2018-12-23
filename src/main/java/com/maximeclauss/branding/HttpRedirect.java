@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
-@Profile({"test"})
+@Profile({"production"})
 public class HttpRedirect {
 
     @Bean
@@ -38,7 +38,6 @@ public class HttpRedirect {
         connector.setPort(80);
         connector.setSecure(false);
         connector.setRedirectPort(443);
-
         return connector;
     }
 }
