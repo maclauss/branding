@@ -57,5 +57,5 @@ export default withStyles(styles)(Nav);
 
 const Logo = props =>
   <a href="/">
-    <img src="https://storage.googleapis.com/prod_website/img/logo_website.png" width="50"/>
+    <img src="https://storage.googleapis.com/branding-public-assets/surenot.png" width="50"/>
   </a>;
