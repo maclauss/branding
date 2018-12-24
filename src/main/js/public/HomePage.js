@@ -17,9 +17,14 @@ const HomePage = props =>
         Who am I?
       </Typography>
       <Typography variant="body2" align="justify" color="textSecondary" paragraph>
-        My name is Maxime Clauss, I am a Software & Machine Learning Engineer and a Technology Enthusiast, currently the CTO of deepgreen, a Colorado-based Computer Vision company detecting pests and pathogens to optimize crop production, reduce pesticide use, and enhance food quality.
+        I am a Software & Machine Learning Engineer and a Technology Enthusiast, currently the CTO of deepgreen, a Colorado-based Computer Vision company detecting pests and pathogens to optimize crop production, reduce pesticide use, and enhance food quality.
         <br/><br/>
-        I am a jack of all trades of software engineering and problem solving, particularly good at designing, overseeing, and building very large and complex systems that require a broad range of skills and expertise to coordinate. I use Python and Java everyday, know another ~10 languages including modeling ones, can design complex and optimized database models, know and care about the asymptotic complexities of all modern data structure operations, can design deep neural networks, can setup a CI/CD pipeline and an efficient Devops process. I also build teams, I am very good at assessing and attracting talent, I talk to investors and shareholders, build strategies around technology, and can easily hold product demos.
+        I am a Technology Enthusiast with a passion for learning, sharing, and critical thinking. As an engineer, I excel in designing and implementing efficient, modern, and scalable architectures for the business to grow without worries. As a leader, I build environments where people can grow and feel safe, where they can be aligned, work autonomously, and be more productive.
+        <br/><br/>
+        I have a track record of building great teams, from attracting the best talents to creating efficient development pipelines, including agile practices for better management, continuous delivery for faster time to market, code reviews and test automation for higher quality.
+        I'm an Engineer at heart, and as such I'll never stop learning. Keeping my skills at the highest level allows me to earn trust from my teams, attract and retain talents, and leverage the latest technologies to best answer business requests.
+        <br/><br/>
+        My core expertise is in solving complex technological problems, mostly related to the system&apos;s backend and data pipeline, as well as analytics and machine learning algorithms. I use Java and Python everyday, know another ~10 languages (C, C#, JS, ...), and can learn any new language in a matter of weeks. I am also very familiar with front-end technologies such as Angular and React and particularly excel at finding performance bottlenecks in large scale deployment models.
         <br/><br/>
         This page is meant to be a portal for users of my projects, as well as a portfolio / resume and a way for people to get in touch with me.
       </Typography>
