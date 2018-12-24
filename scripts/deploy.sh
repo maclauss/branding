@@ -12,7 +12,7 @@ fi
 
 echo "Deploying ${application}:${version} to ${environment}"
 
-gcloud compute instances delete ${application}
+gcloud compute instances delete ${application} --zone us-central1-a --quiet
 
 gcloud compute instances create ${application} \
     --source-instance-template ${application}-instance-template-${version} \

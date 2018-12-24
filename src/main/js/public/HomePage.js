@@ -17,7 +17,7 @@ const HomePage = props =>
         Who am I?
       </Typography>
       <Typography variant="body2" align="justify" color="textSecondary" paragraph>
-        I am a Software & Machine Learning Engineer and a Technology Enthusiast, currently the CTO of deepgreen, a Colorado-based Computer Vision company detecting pests and pathogens to optimize crop production, reduce pesticide use, and enhance food quality.
+        My name is Maxime Clauss, I am the CTO of deepgreen, a Colorado-based Computer Vision company detecting pests and pathogens to optimize crop production, reduce pesticide use, and enhance food quality.
         <br/><br/>
         I am a Technology Enthusiast with a passion for learning, sharing, and critical thinking. As an engineer, I excel in designing and implementing efficient, modern, and scalable architectures for the business to grow without worries. As a leader, I build environments where people can grow and feel safe, where they can be aligned, work autonomously, and be more productive.
         <br/><br/>
