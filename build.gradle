@@ -33,6 +33,8 @@ dependencies {
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator'
     compile group: 'org.springframework.boot', name: 'spring-boot-devtools'
 
+    compile group: 'com.sendgrid', name:'sendgrid-java', version: '4.3.0'
+
     // Test
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test'
 }
