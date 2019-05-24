@@ -17,5 +17,5 @@ gcloud beta compute instance-templates create-with-container ${application}-inst
     --machine-type g1-small \
     --tags allow-health-check,http-server,https-server \
     --container-image gcr.io/${project}/${application}:${version} \
-    --container-env environment=${environment},SERVER_SSL_KEYSTOREPASSWORD=${SERVER_SSL_KEYSTOREPASSWORD} \
+    --container-env environment=${environment},SERVER_SSL_KEYSTOREPASSWORD=${SERVER_SSL_KEYSTOREPASSWORD},SENDGRID_API_KEY=${PERSONAL_SENDGRID_API_KEY} \
     --project ${project}
