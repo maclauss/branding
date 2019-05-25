@@ -23,8 +23,6 @@ jobs:
 
     steps:
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "build.gradle" }}
@@ -38,5 +36,10 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
-      # run tests!
+      # run webpack build
+      - run: npm install
+      - run: npm run build
+      # run gradle build
+      - run: gradle build
+      # run tests
       - run: gradle test
