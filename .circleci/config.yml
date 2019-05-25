@@ -37,6 +37,7 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "build.gradle" }}-{{checksum "package.json"}}
 
+      # TODO Provide an image containing the nodejs and npm versions to be used
       - run:
           name: "Update Node.js and npm"
           command: |
