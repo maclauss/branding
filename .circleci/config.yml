@@ -32,10 +32,6 @@ jobs:
             curl https://www.npmjs.com/install.sh | sudo bash
             curl -o- -L https://yarnpkg.com/install.sh | bash
             source /home/circleci/.bashrc
-            echo "ls"
-            ls -al ~/.yarn
-            echo ".bashrc"
-            cat /home/circleci/.bashrc
 
       - restore_cache:
           keys:
@@ -43,7 +39,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: yarn install
+      - run: /home/circleci/.yarn/bin/yarn install
 
       - run: gradle dependencies
 
