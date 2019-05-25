@@ -32,6 +32,10 @@ jobs:
             curl https://www.npmjs.com/install.sh | sudo bash
             curl -o- -L https://yarnpkg.com/install.sh | bash
             source /home/circleci/.bashrc
+            echo "ls"
+            ls -al ~/.yarn
+            echo ".bashrc"
+            cat /home/circleci/.bashrc
 
       - restore_cache:
           keys:
