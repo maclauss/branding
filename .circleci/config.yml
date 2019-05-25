@@ -36,12 +36,25 @@ jobs:
             - ~/.gradle
           key: v1-dependencies-{{ checksum "build.gradle" }}
 
+      - run:
+          name: "Update Node.js and npm"
+          command: |
+            curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node
+            curl https://www.npmjs.com/install.sh | sudo bash
+      - run:
+          name: Check current version of node
+          command: node -v
+
       # run webpack build
-      - run: npm install
-      - run: npm run build
+      - run:
+          name: "Install frontend dependencies"
+          command: npm install
+      - run:
+          name: "Build frontend"
+          command: npm run build
 
       # run gradle build
       - run: gradle build
-      
+
       # run tests
       - run: gradle test
