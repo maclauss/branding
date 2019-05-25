@@ -41,20 +41,23 @@ jobs:
           command: |
             curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node
             curl https://www.npmjs.com/install.sh | sudo bash
-      - run:
-          name: Check current version of node
-          command: node -v
 
-      # run webpack build
       - run:
           name: "Install frontend dependencies"
           command: npm install
+
       - run:
           name: "Build frontend"
           command: npm run build
 
-      # run gradle build
-      - run: gradle build
+      - run:
+          name: "Verify gradle version"
+          command: gradle --version
 
-      # run tests
-      - run: gradle test
+      - run:
+          name: "Build artifact"
+          command: gradle build
+
+      - run:
+          name: "Run backend tests"
+          command: gradle test
