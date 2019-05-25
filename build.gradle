@@ -26,6 +26,10 @@ repositories {
     }
 }
 
+springBoot {
+  mainClass = "com.maximeclauss.branding.WebApplication"
+}
+
 dependencies {
     // Spring
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web'
