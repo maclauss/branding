@@ -34,7 +34,7 @@ jobs:
 
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "build.gradle" }}-{{checksum "package.json"}}
+            - v1-dependencies-{{ checksum "build.gradle" }}-{{checksum "yarn.lock"}}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
@@ -48,7 +48,7 @@ jobs:
           paths:
             - ~/.gradle
             - node_modules
-          key: v1-dependencies-{{ checksum "build.gradle" }}-{{checksum "package.json"}}
+          key: v1-dependencies-{{ checksum "build.gradle" }}-{{checksum "yarn.lock"}}
 
       - run:
           name: "Build frontend"
