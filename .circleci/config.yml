@@ -30,11 +30,10 @@ jobs:
           command: |
             curl -sSL "https://nodejs.org/dist/v11.10.0/node-v11.10.0-linux-x64.tar.xz" | sudo tar --strip-components=2 -xJ -C /usr/local/bin/ node-v11.10.0-linux-x64/bin/node
             curl https://www.npmjs.com/install.sh | sudo bash
-            curl -o- -L https://yarnpkg.com/install.sh | bash
 
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "build.gradle" }}-{{checksum "yarn.lock"}}
+            - v1-dependencies-{{ checksum "build.gradle" }}-{{checksum "package.lock"}}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
@@ -42,21 +41,17 @@ jobs:
 
       - run:
           name: "Install frontend dependencies"
-          command: /home/circleci/.yarn/bin/yarn install
+          command: npm install
 
       - save_cache:
           paths:
             - ~/.gradle
             - node_modules
-          key: v1-dependencies-{{ checksum "build.gradle" }}-{{checksum "yarn.lock"}}
+          key: v1-dependencies-{{ checksum "build.gradle" }}-{{checksum "package.lock"}}
 
       - run:
           name: "Build frontend"
           command: npm run build
-
-      - run:
-          name: "Verify gradle version"
-          command: gradle --version
 
       - run:
           name: "Build artifact"
